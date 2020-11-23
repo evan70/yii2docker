@@ -1,0 +1,20 @@
+# IDEs project files
+.idea
+.vscode
+nbproject
+.buildpath
+.project
+.settings
+
+# OS cache files
+Thumbs.db
+.DS_Store
+
+# Composer files & vendor dir
+composer.phar
+/vendor
+/runtime
+
+# Project files
+.env
+/node_modules

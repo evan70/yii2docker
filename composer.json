@@ -1,0 +1,48 @@
+{
+  "name": "manchenkov/yii2-project",
+  "description": "Custom Yii 2 application boilerplate",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artem Manchenkov",
+      "email": "artyom@manchenkoff.me"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/"
+    },
+    "files": [
+      "config/helpers.php"
+    ]
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "cp .env.example .env"
+    ]
+  },
+  "require": {
+    "php": "^7.4",
+    "ext-pcntl": "*",
+    "ext-json": "*",
+    "yiisoft/yii2": "^2.0",
+    "yiisoft/yii2-swiftmailer": "^2.1",
+    "yiisoft/yii2-authclient": "^2.2.4",
+    "vlucas/phpdotenv": "^3.3",
+    "manchenkov/yii2-helpers": "^1.0.9",
+    "manchenkov/php-helpers": "^1.0.9",
+    "manchenkov/yii2-recaptcha3": "^1.0.2",
+    "manchenkov/yii2-components": "^2.0.1"
+  },
+  "require-dev": {
+    "deployer/deployer": "^6.4",
+    "codeception/base": "^3.0",
+    "phpunit/phpunit": "~7",
+    "guzzlehttp/guzzle": "^6.3",
+    "symfony/event-dispatcher": "<=4.2.8",
+    "symfony/browser-kit": ">=2.7 <=4.2.4",
+    "tebazil/yii2-db-seeder": "^0.0.0",
+    "manchenkov/yii2-maker": "^1.0.4"
+  }
+}

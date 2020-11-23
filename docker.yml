@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  php:
+    image: manchenkoff/php-xdebug
+    networks:
+      - application
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./:/var/www/app/:cached
+    depends_on:
+      - db
+
+  db:
+    image: mysql
+    networks:
+      - application
+    ports:
+      - 3306:3306
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+
+networks:
+  application:
